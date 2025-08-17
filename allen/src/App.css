@@ -1,0 +1,18 @@
+body{
+  margin: 0px;
+  overflow-x: hidden;
+}
+/* Put this in your CSS or inline style */
+::-webkit-scrollbar {
+  width: 12px; /* or height: 12px for horizontal */
+}
+
+::-webkit-scrollbar-track {
+  background: white; /* background of scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1; /* color of draggable thumb */
+  border-radius: 6px;
+  border: 2px solid white; /* creates padding around thumb */
+}
