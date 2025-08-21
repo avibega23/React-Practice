@@ -6,14 +6,11 @@ function App() {
   const [characters, setCharacters] = useState(false);
   const [password, setPassword] = useState("");
 
-
   const passwordRef = useRef(null);
-
 
   useEffect(() => {
     passwordGenerator();
   }, [length, number, characters]);
-
 
   const passwordGenerator = useCallback(() => {
     let pass = "";
@@ -28,12 +25,10 @@ function App() {
     setPassword(pass);
   }, [length, number, characters, password]);
 
-
-  const copyPassword = useCallback(()=>{
-    passwordRef.current?.select()
+  const copyPassword = useCallback(() => {
+    passwordRef.current?.select();
     window.navigator.clipboard.writeText(password);
-  },[password])
-
+  }, [password]);
 
   return (
     <>
